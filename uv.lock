@@ -1038,6 +1038,11 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/6d/30/088486ccb2ceb0c93461f6410cfa43d8dbe2083fdb61e334a666e3e8a0a2/dvc-3.67.1-py3-none-any.whl", hash = "sha256:b1ea7d8d690a637adbcba74591555f811eed1ab96cc74d808dfd861669d030ed", size = 470073, upload-time = "2026-03-31T05:07:27.996Z" },
 ]
 
+[package.optional-dependencies]
+s3 = [
+    { name = "dvc-s3" },
+]
+
 [[package]]
 name = "dvc-data"
 version = "3.18.3"
@@ -3370,6 +3375,11 @@ dependencies = [
     { name = "statsmodels" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "dvc", extra = ["s3"] },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "dvc", specifier = ">=3.67.1" },
@@ -3393,6 +3403,9 @@ requires-dist = [
     { name = "seaborn", specifier = ">=0.13.2" },
     { name = "statsmodels", specifier = ">=0.15.0" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "dvc", extras = ["s3"], specifier = ">=3.67.1" }]
 
 [[package]]
 name = "rfc3339-validator"
