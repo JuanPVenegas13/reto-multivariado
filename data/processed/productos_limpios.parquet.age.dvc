@@ -1,0 +1,5 @@
+outs:
+- md5: 74354f328efb68f906e7a3ea5ca18d0b
+  size: 41417
+  hash: md5
+  path: productos_limpios.parquet.age
